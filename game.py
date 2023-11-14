@@ -1,7 +1,7 @@
 import random
 
 def number_guessing_game(low, high, rounds):
-    print(f"Welcome to the Number Guessing Game! I'm thinking of a number between {low} and {high}.")
+    print(f"Welcome to the ML4SE Number Guessing Game! I'm thinking of a number between {low} and {high}.")
 
     # Generate a random number
     number = random.randint(low, high)
