@@ -1,0 +1,19 @@
+**1) Description**
+
+The conditional clause within the HIT01\_8.java script, specifically between lines 285 and 289, does not produce the correct result when both **hoursOffset** and **minutesOffset** are negative. This bug is related to the logic implemented in the script, which should allow for negative offsets as part of its functionality. Further investigation indicates the true source of the error originates from lines 279-281, where the script throws an error for negative **minutesOffset** values. This behavior contradicts the comments in the code, which indicate that negative offsets are to be handled explicitly by the function.
+
+**2) Steps to Reproduce**
+
+1. Locate the script HIT01\_8.java.
+1. Navigate to the function handling time offset calculations (assumed to be around lines 279-289).
+1. Input a set of negative values for both **hoursOffset** and **minutesOffset**.
+1. Observe the output or error message produced.
+
+**3) Expected Result**
+
+The function is expected to handle negative values for **hoursOffset** and **minutesOffset** gracefully, adjusting the time accordingly as per the comments and intended functionality described in the script. The function should return the correct time offset without throwing errors.
+
+**4) Actual Result**
+
+When both **hoursOffset** and **minutesOffset** are negative, the function does not produce the correct result and instead throws an error for negative **minutesOffset** values between lines 279-281. This behavior is inconsistent with the script's comments and expected functionality.
+
